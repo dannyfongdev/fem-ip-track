@@ -6,49 +6,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | IP Address Tracker</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-
-    #map { height: 180px; }
+  <style src="css/main.css">
   </style>
+  <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
     integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
 </head>
 
 <body>
-
-  <h1>IP Address Tracker</h1>
-
-  <h2>Search for any IP address or domain</h2>
-  <input type="text" value="msn.com" id="search-string">
-  <button id="search-button">Search</button>
-<p id="response-output"></p>
-  <p>IP Address <span id="ip-address"></span></p>
-  <p>Location <span id="location"></span></p>
-  <p>Timezone
-    UTC <span id="timezone"></span></p><!-- add offset value dynamically using the API -->
-  <p>ISP <span id="isp"></span></p>
-  <div id="map"></div>
-
+  <main class="container">
+    <div class="top-image">
+      <h1>IP Address Tracker</h1>
+      <div class="search-bar">
+        <input class="search-box" type="text"  id="search-string" placeholder="Search for any IP address or domain">
+        <a id="search-button"><img src="./images/icon-arrow.svg" alt="arrow"></a>
+      </div>
+      <p id="response-output"></p>
+      <div class="detailed-info">
+        <p class="d-label">IP Address</p>
+        <p class="d-text"><span id="ip-address"></span></p>
+        <p class="d-label">Location</p>
+        <p class="d-text"><span id="location"></span></p>
+        <p class="d-label">Timezone</p>
+        <p class="d-text">UTC <span id="timezone"></span></p><!-- add offset value dynamically using the API -->
+        <p class="d-label">ISP</p>
+        <p class="d-text"><span id="isp"></span></p>
+      </div>
+    </div>
+    <div id="map"></div>
+  </main>
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
   <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
-     integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
-     crossorigin=""></script>
+    integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
   <script src="./js/geolocation.js"></script>
   <script src="./js/ui.js"></script>
   <script src="./js/app.js"></script>

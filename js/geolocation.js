@@ -62,6 +62,8 @@ class Geolocation {
   // console.log(geoData)
 
   async getGeoData(ip, domain) {
+    // for now, use dummy data, save fetches bc quota
+    return this.geoData;
     if (ip=='' && domain=='') {
       // return default dummy data
       return this.geoData;

@@ -9,19 +9,12 @@ document.addEventListener('DOMContentLoaded', getGeoData('', ''));
 
 searchButtonUI.addEventListener('click', async(e) => {
   const strValue = searchStringUI.value;
-  const strQuery = "";
-  // test code
-  // const responseText = document.getElementById('response-output');
-  // const response = await fetch(`/.netlify/functions/geolocation?name=Brad`).then (response => response.json());
-  // responseText.innerText = JSON.stringify(response);
 
   if (ipAddressCheck(strValue)) {
-    console.log("ip address");
     ui.clearMap();
     getGeoData(strValue, '');
   } else {
     if (checkIsValidDomain(strValue)) {
-      console.log("domain name");
       ui.clearMap();
       getGeoData('', strValue);
     } else {
