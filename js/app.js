@@ -20,6 +20,9 @@ searchButtonUI.addEventListener('click', async(e) => {
       getGeoData('', strValue);
     } else {
       errorMessage.innerText = "Not a valid domain name or IP address."
+      setTimeout ( ()=>{
+        errorMessage.innerText = "";
+      }, 5000)
     }
   }
 });
