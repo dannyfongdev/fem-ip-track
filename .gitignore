@@ -20,7 +20,6 @@
 # My excludes
 .vscode
 .env
-node_modules
 node-fetch
 hello-world
 README-challenge.md
