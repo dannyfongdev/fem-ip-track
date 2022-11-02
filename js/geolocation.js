@@ -64,10 +64,7 @@ class Geolocation {
   async getGeoData(ip, domain) {
     // use dummy data for testing
     // return this.geoData; 
-    if (ip=='' && domain=='') {
-      // return default dummy data
-      return this.geoData;
-    }
+   
     // build query
     const queryString = `ipAddress=${ip}&domain=${domain}`;
     

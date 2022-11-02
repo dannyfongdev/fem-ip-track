@@ -6,7 +6,7 @@ const searchStringUI = document.querySelector("#search-string");
 const errorMessage = document.querySelector("#error-message");
 
 // Event Listener
-document.addEventListener('DOMContentLoaded', getGeoData('', ''));
+document.addEventListener('DOMContentLoaded', getGeoData(','));
 
 searchButtonUI.addEventListener('click', async(e) => {
   const strValue = searchStringUI.value;

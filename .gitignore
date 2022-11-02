@@ -18,6 +18,7 @@
 .netlify
 
 # My excludes
+.vscode
 .env
 node_modules
 node-fetch
