@@ -4,13 +4,12 @@ const handler = async (event) => {
   try {
     // build the url
     const fetchUrl = `https://geo.ipify.org/api/v2/country,city?apiKey=${process.env.API_KEY_GEO}&${event.rawQuery}`; 
-    console.log(fetchUrl);
 
     // fetch from ipify
     const response = await fetch(fetchUrl);
-    console.log(response);
+    
     const responseData = await response.json();
-    console.log(responseData);
+    
  
     // return ipify data
     return {

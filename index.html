@@ -27,16 +27,28 @@
         <input class="search-box" type="text" id="search-string" placeholder="Search for any IP address or domain">
         <input type="image" id="search-button" src="./images/icon-arrow.svg" alt="arrow"></input>
       </div>
-      <p id="response-output"></p>
+      <p id="error-message"></p>
       <div class="detailed-info">
-        <p class="d-label">IP Address</p>
-        <p class="d-text"><span id="ip-address"></span></p>
-        <p class="d-label">Location</p>
-        <p class="d-text"><span id="location"></span></p>
-        <p class="d-label">Timezone</p>
-        <p class="d-text">UTC <span id="timezone"></span></p><!-- add offset value dynamically using the API -->
-        <p class="d-label">ISP</p>
-        <p class="d-text"><span id="isp"></span></p>
+        <div class="d-box">
+          <p class="d-label">IP Address</p>
+          <p class="d-text"><span id="ip-address"></span></p>
+        </div>
+        <div class="d-line"></div>
+        <div class="d-box">
+          <p class="d-label">Location</p>
+          <p class="d-text"><span id="location"></span></p>
+        </div>
+        <div class="d-line"></div>
+        <div class="d-box">
+          <p class="d-label">Timezone</p>
+          <p class="d-text">UTC <span id="timezone"></span></p>
+          <!-- add offset value dynamically using the API -->
+        </div>
+        <div class="d-line"></div>
+        <div class="d-box">
+          <p class="d-label">ISP</p>
+          <p class="d-text"><span id="isp"></span></p>
+        </div>
       </div>
     </div>
     <div id="map"></div>

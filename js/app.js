@@ -3,6 +3,7 @@ const geo = new Geolocation();
 const ui = new UI();
 const searchButtonUI = document.querySelector("#search-button");
 const searchStringUI = document.querySelector("#search-string");
+const errorMessage = document.querySelector("#error-message");
 
 // Event Listener
 document.addEventListener('DOMContentLoaded', getGeoData('', ''));
@@ -18,7 +19,7 @@ searchButtonUI.addEventListener('click', async(e) => {
       ui.clearMap();
       getGeoData('', strValue);
     } else {
-      // responseText.innerText = "Not a valid domain name or IP address."
+      errorMessage.innerText = "Not a valid domain name or IP address."
     }
   }
 });

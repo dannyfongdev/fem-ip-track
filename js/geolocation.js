@@ -62,8 +62,8 @@ class Geolocation {
   // console.log(geoData)
 
   async getGeoData(ip, domain) {
-    // for now, use dummy data, save fetches bc quota
-    return this.geoData;
+    // use dummy data for testing
+    // return this.geoData; 
     if (ip=='' && domain=='') {
       // return default dummy data
       return this.geoData;
@@ -77,15 +77,4 @@ class Geolocation {
     return responseData;
   }
 
-
-  // Fetch data from geo.ipify.org API
-  async getGeoDataFromProxy(ip, domain) {
-    const response = await fetch(
-      "http://localhost:8888/.netlify/functions/geolocation"
-    );
-
-    const responseData = await response.json();
-
-    return responseData;
-  }
 }
