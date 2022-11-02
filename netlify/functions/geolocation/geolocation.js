@@ -9,7 +9,7 @@ const handler = async (event) => {
     const response = await fetch(fetchUrl);
     
     const responseData = await response.json();
-    
+    console.log(responseData);
  
     // return ipify data
     return {

@@ -67,6 +67,7 @@ class Geolocation {
    
     // build query
     const queryString = `ipAddress=${ip}&domain=${domain}`;
+    console.log(queryString);
     
     // call serverless function
     const response = await fetch(`/.netlify/functions/geolocation?${queryString}`);
